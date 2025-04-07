@@ -7,10 +7,13 @@ const WorkArea = () => {
          <div className="container">
             <div className="row justify-content-center">
                <div className="col-lg-6">
-                  <div className="section__title text-center white-title mb-50">
-                     <span className="sub-title">HOW IT WORKS</span>
-                     <h2 className="title">How We Operate Unveiling <br /> Our Logistics Process</h2>
-                  </div>
+               <div className="section__title text-center white-title mb-50">
+  <span className="sub-title">¿CÓMO FUNCIONA?</span>
+  <h2 className="title">
+    Así gestionamos tu envío <br /> de forma segura y eficiente
+  </h2>
+</div>
+
                </div>
             </div>
             <div className="work__item-wrap">

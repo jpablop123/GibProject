@@ -1,15 +1,13 @@
 "use client";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
-import InjectableSvg from "@/components/common/InjectableSvg"
-import Image from "next/image";
-import Link from "next/link"
-
-import shape from "@/assets/img/slider/slider_shape.svg"
+import InjectableSvg from "@/components/common/InjectableSvg";
+import Link from "next/link";
 
 interface DataType {
    id: number;
    img: string;
+   sub_title: string;
    title: string;
    desc: JSX.Element;
 }
@@ -17,15 +15,25 @@ interface DataType {
 const hero_data: DataType[] = [
    {
       id: 1,
-      img: "/assets/img/slider/slider_bg01.jpg",
-      title: "Logistics & Cargo For Pro Business",
-      desc: (<>when an unknown printer took a galley of type and company need scra make it better future to make attempt type specimen.</>)
+      img: "/assets/img/slider/h4_slider_bg01.jpg",
+      sub_title: "Desde Colombia hacia USA",
+      title: "Envía tus productos de forma fácil y segura",
+      desc: (
+         <>
+            Ya sea que necesites enviar documentos, paquetes personales o productos de tu negocio, en Gib Traders te ofrecemos una solución rápida, confiable y con seguimiento en tiempo real.
+         </>
+      ),
    },
    {
       id: 2,
-      img: "/assets/img/slider/slider_bg02.jpg",
-      title: "We Deliver your Product Anywhere!",
-      desc: (<>when an unknown printer took a galley of type and company need scra make it better future to make attempt type specimen.</>)
+      img: "/assets/img/slider/h4_slider_bg02.jpg",
+      sub_title: "Conecta con Estados Unidos",
+      title: "Exporta desde Colombia sin complicaciones",
+      desc: (
+         <>
+            Usa nuestro servicio para exportar desde Colombia a cualquier ciudad en USA. Nos encargamos de la logística para que tú solo te enfoques en crecer tu negocio.
+         </>
+      ),
    },
 ];
 
@@ -37,28 +45,35 @@ const Hero = () => {
             loop={true}
             autoplay={{ delay: 10000 }}
             modules={[EffectFade, Autoplay]}
-            className="slider__active"
-            effect="fade"   >
+            className="swiper-container slider__active-two"
+            effect="fade"
+         >
             {hero_data.map((item) => (
-               <SwiperSlide key={item.id} className=" slider__single">
-                  <div className="slider__bg" style={{ backgroundImage: `url(${item.img})` }}></div>
+               <SwiperSlide key={item.id} className="slider__single-two">
+                  <div className="slider__bg-two" style={{ backgroundImage: `url(${item.img})` }}></div>
                   <div className="container">
-                     <div className="slider__content">
-                        <div className="row">
-                           <div className="col-lg-6">
-                              <h2 className="title">Logistics & Cargo For Pro Business</h2>
-                              <p>when an unknown printer took a galley of type and company need scra make it better future to make attempt type specimen.</p>
-                              <Link href="/services" className="btn border-btn">Explore Our Services <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" /></Link>
+                     <div className="row">
+                        <div className="col-lg-6">
+                           <div className="slider__content-two">
+                              <span className="sub-title">{item.sub_title}</span>
+                              <h2 className="title">{item.title}</h2>
+                              <p>{item.desc}</p>
+                              <div className="slider__btn-wrap">
+                                 <Link href="/#cotizar" className="btn">
+                                    Cotiza tu envío{" "}
+                                    <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" />
+                                 </Link>
+                                 
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <Image src={shape} alt="shape" className="shape" />
                </SwiperSlide>
             ))}
          </Swiper>
       </section>
-   )
-}
+   );
+};
 
-export default Hero
+export default Hero;

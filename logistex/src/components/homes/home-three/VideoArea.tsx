@@ -9,7 +9,7 @@ const VideoArea = () => {
 
    return (
       <>
-         <section className="video__area-three">
+         <section className="video__area-three" id="cotizar">
             <div className="video__bg video__bg-three" style={{ backgroundImage: `url(/assets/img/bg/video_bg03.jpg)` }}></div>
             <div className="container">
                <div className="row align-items-center">

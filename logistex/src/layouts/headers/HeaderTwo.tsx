@@ -7,8 +7,8 @@ import { useState } from "react"
 import MobileSidebar from "./menu/MobileSidebar"
 import InjectableSvg from "@/components/common/InjectableSvg"
 
-import logo_1 from "@/assets/img/logo/w_logo.svg"
-import logo_2 from "@/assets/img/logo/logo02.svg"
+import logo_1 from "@/assets/img/logo/giblogo.png"
+import logo_2 from "@/assets/img/logo/giblogo.png"
 import HeaderTopTwo from "./HeaderTopTwo"
 
 const HeaderTwo = () => {
@@ -24,12 +24,30 @@ const HeaderTwo = () => {
                <div className="row">
                   <div className="col-12">
                      <div className="tgmenu__wrap">
-                        <div className="logo">
-                           <Link href="/"><Image src={logo_1} alt="Logo" /></Link>
-                        </div>
-                        <div className="logo d-none">
-                           <Link href="/"><Image src={logo_2} alt="Logo" /></Link>
-                        </div>
+                     <div className="logo">
+  <Link href="/">
+    <Image
+      src={logo_1}
+      alt="Logo"
+      width={220}        // Adjust width as needed
+      height={100}       // 👈 Increase this to make it taller
+      style={{ height: '100px', width: 'auto' }} // Optional: ensures responsive scaling
+    />
+  </Link>
+</div>
+
+<div className="logo d-none">
+  <Link href="/">
+    <Image
+      src={logo_2}
+      alt="Logo"
+      width={220}
+      height={100}
+      style={{ height: '100px', width: 'auto' }}
+    />
+  </Link>
+</div>
+
                         <div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-xl-flex">
                            <NavMenu />
                         </div>
@@ -40,12 +58,12 @@ const HeaderTwo = () => {
                                     <i className="flaticon-telephone"></i>
                                  </div>
                                  <div className="content">
-                                    <span>Emergency Call:</span>
-                                    <Link href="tel:0123456789">(205) 555-0100</Link>
+                                    <span>Llámanos:</span>
+                                    <Link href="tel:7865317987">+1 (786)-531-7987</Link>
                                  </div>
                               </li>
                               <li className="header-btn">
-                                 <Link href="/contact" className="btn btn-three">Get A Quote <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" /></Link>
+                                 <Link href="/#cotizar" className="btn btn-three">Cotiza<InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" /></Link>
                               </li>
                            </ul>
                         </div>

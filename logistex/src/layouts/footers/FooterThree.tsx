@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import logo from "@/assets/img/logo/w_logo.svg"
+import gibLogo from "@/assets/img/logo/giblogo.jpeg"
 import shape_1 from "@/assets/img/images/h3_footer_shape01.svg"
 import shape_2 from "@/assets/img/images/h3_footer_shape02.svg"
 
@@ -14,7 +14,7 @@ const FooterThree = () => {
                   <div className="col-xl-4 col-lg-5 col-md-6">
                      <div className="footer__widget">
                         <div className="footer__logo">
-                           <Link href="/"><Image src={logo} alt="logo" /></Link>
+                           <Link href="/"><Image src={gibLogo} alt="logo" /></Link>
                         </div>
                         <div className="footer__content footer__content-three">
                            <p>Lorem ipsum dolor sit amet, consect etur adi pisicing elit sed do eiusmod tempor incidunt ut labore et</p>

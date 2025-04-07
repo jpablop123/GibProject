@@ -16,7 +16,8 @@ import Testimonial from "./Testimonial"
 
 const HomeFour = () => {
    return (
-      <div className="theme-red">
+      <div className="theme-orange
+   ">
          <HeaderFour />
          <main className="fix">
             <Hero />

@@ -8,7 +8,7 @@ const HowItWorkArea = () => {
             <div className="row justify-content-center">
                <div className="col-lg-6">
                   <div className="section__title text-center mb-50">
-                     <span className="sub-title">HOW IT WORKS</span>
+                     <span className="sub-title">ASI FUNCIONA</span>
                      <h2 className="title">How We Operate Unveiling <br /> Our Logistics Process</h2>
                   </div>
                </div>

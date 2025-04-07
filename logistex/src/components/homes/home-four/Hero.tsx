@@ -16,16 +16,24 @@ const hero_data: DataType[] = [
    {
       id: 1,
       img: "/assets/img/slider/h4_slider_bg01.jpg",
-      sub_title: "Fastest & Secure Logistics",
-      title: "Provide Smart & Simple Warehousing",
-      desc: (<>when an unknown printer took a galley of type and company need scra make it better future to make attempt type specimen.</>),
+      sub_title: "Desde Colombia hacia USA",
+      title: "Envía tus productos de forma fácil y segura",
+      desc: (
+         <>
+            Ya sea que necesites enviar documentos, paquetes personales o productos de tu negocio, en Gib Traders te ofrecemos una solución rápida, confiable y con seguimiento en tiempo real.
+         </>
+      ),
    },
    {
       id: 2,
       img: "/assets/img/slider/h4_slider_bg02.jpg",
-      sub_title: "Fastest & Secure Logistics",
-      title: "Provide Smart & Simple Warehousing",
-      desc: (<>when an unknown printer took a galley of type and company need scra make it better future to make attempt type specimen.</>),
+      sub_title: "Conecta con Estados Unidos",
+      title: "Exporta desde Colombia sin complicaciones",
+      desc: (
+         <>
+            Usa nuestro servicio para exportar desde Colombia a cualquier ciudad en USA. Nos encargamos de la logística para que tú solo te enfoques en crecer tu negocio.
+         </>
+      ),
    },
 ];
 
@@ -38,7 +46,8 @@ const Hero = () => {
             autoplay={{ delay: 10000 }}
             modules={[EffectFade, Autoplay]}
             className="swiper-container slider__active-two"
-            effect="fade"   >
+            effect="fade"
+         >
             {hero_data.map((item) => (
                <SwiperSlide key={item.id} className="slider__single-two">
                   <div className="slider__bg-two" style={{ backgroundImage: `url(${item.img})` }}></div>
@@ -50,8 +59,11 @@ const Hero = () => {
                               <h2 className="title">{item.title}</h2>
                               <p>{item.desc}</p>
                               <div className="slider__btn-wrap">
-                                 <Link href="/contact" className="btn">Contact Us <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" /></Link>
-                                 <Link href="/contact" className="btn border-btn">Our Dedicated Services <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" /></Link>
+                                 <Link href="/#cotizar" className="btn">
+                                    Cotiza tu envío{" "}
+                                    <InjectableSvg src="/assets/img/icon/right_arrow.svg" alt="" className="injectable" />
+                                 </Link>
+                                 
                               </div>
                            </div>
                         </div>
@@ -61,7 +73,7 @@ const Hero = () => {
             ))}
          </Swiper>
       </section>
-   )
-}
+   );
+};
 
-export default Hero
+export default Hero;

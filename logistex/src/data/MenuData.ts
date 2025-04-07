@@ -3,45 +3,42 @@ interface MenuItem {
    title: string;
    link: string;
    has_dropdown: boolean;
-}
-
-const menu_data: MenuItem[] = [
+ }
+ 
+ const menu_data: MenuItem[] = [
    {
-      id: 1,
-      has_dropdown: false,
-      title: "Home",
-      link: "/",
+     id: 1,
+     has_dropdown: false,
+     title: "Inicio",
+     link: "/",
    },
    {
-      id: 2,
-      has_dropdown: false,
-      title: "Cotiza",
-      link: "/cotizar",
+     id: 2,
+     has_dropdown: false,
+     title: "Cotizar",
+     link: "/#cotizar",
    },
    {
-      id: 3,
-      has_dropdown: false,
-      title: "Pages",
-      link: "/pages",
+     id: 3,
+     has_dropdown: false,
+     title: "Contacto",
+     link: "/#cotizar",
    },
    {
       id: 4,
       has_dropdown: false,
-      title: "Blog",
-      link: "/blog",
-   },
-   {
+      title: "Casillero",
+      link: "/casillero",
+    },
+    {
       id: 5,
       has_dropdown: false,
-      title: "Contact",
-      link: "/contact",
-   },
-   {
-      id: 6,
-      has_dropdown: false,
-      title: "Idioma",
-      link: "/language",
-   },
-];
+      title: "Registrate",
+      link: "/registrate",
+    },
 
-export default menu_data;
+
+ ];
+ 
+ export default menu_data;
+ 
